@@ -1,0 +1,37 @@
+{
+  "name": "mern-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
+    "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
+    "app": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autJiahao"
+  },
+  "author": "Jiahao Guo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/autJiahao/issues"
+  },
+  "homepage": "https://github.com/autJiahao/Worksheet03",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.15",
+    "node": "^16.14.0",
+    "react-router-dom": "^6.2.2",
+    "validation": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
