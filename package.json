@@ -4,9 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "heroku-postbuild": "npm run install-mern-app && npm run build",
     "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
     "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
     "app": "nodemon app.js",
+    "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +25,7 @@
     "axios": "^0.26.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "concurrently": "^7.0.0",
     "config": "^3.3.7",
     "cors": "^2.8.5",
     "express": "^4.17.1",
