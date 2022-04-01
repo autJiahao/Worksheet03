@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build": "webpack",
     "install-client": "cd mern-app && npm install",
-    "heroku-postbuild": "npm run install-mern-app && npm run build",
+    "heroku-postbuild": "npm run install-mern-app && npm run build && ng build --prod",
     "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
     "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
     "app": "nodemon app.js",
