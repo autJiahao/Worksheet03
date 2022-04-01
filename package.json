@@ -7,18 +7,23 @@
     "node": "16.x"
   },
   "scripts": {
-    "install-client": "cd mern-app && npm install",
     "heroku-postbuild": "npm run install-mern-app && npm run build",
     "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
     "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
     "app": "nodemon app.js",
-    "server": "nodemon server.js",
+    "server": "nodemon app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/autJiahao"
   },
+  "events": {
+    "restart": "kill-port 5000",
+    "crash": "kill-port 5000"
+  },
+  "delay": "1500",
   "author": "Jiahao Guo",
   "license": "ISC",
   "bugs": {
@@ -32,6 +37,7 @@
     "concurrently": "^7.0.0",
     "config": "^3.3.7",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.5.15",
     "node": "^16.14.0",
@@ -39,6 +45,7 @@
     "validation": "0.0.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "nodemon": "^1.19.1"
   }
 }
