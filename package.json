@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "install-client": "cd mern-app && npm install",
     "heroku-postbuild": "npm run install-mern-app && npm run build",
     "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
     "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
