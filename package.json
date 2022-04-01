@@ -10,11 +10,12 @@
     "heroku-postbuild": "npm run install-mern-app && npm run build",
     "build": "webpack",
     "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
-    "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
+    "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\" && ",
     "app": "nodemon app.js",
     "server": "nodemon app.js",
     "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
