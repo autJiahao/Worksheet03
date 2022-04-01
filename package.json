@@ -8,6 +8,7 @@
   },
   "scripts": {
     "heroku-postbuild": "npm run install-mern-app && npm run build",
+    "build": "webpack",
     "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
     "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix mern-app\"",
     "app": "nodemon app.js",
